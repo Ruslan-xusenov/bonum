@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NextMarket - Oziq-ovqat do'koni</title>
+    <title>Bonum - Fast Food</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/modals.css' %}">
@@ -18,13 +18,12 @@
         <div class="container">
             <div class="nav-top">
                 <a href="{% url 'market:home' %}" class="logo">
-                    <i class="fas fa-shopping-basket"></i> NextMarket
+                    <i class="fas fa-hamburger"></i> Bonum
                 </a>
                 {% if request.resolver_match.url_name != 'home' %}
                 <div class="search-bar">
                     <form action="{% url 'market:home' %}" method="get">
-                        <input type="text" name="q" placeholder="Mahsulotlar va turkumlar bo'ylab qidirish"
-                            value="{{ query|default:'' }}">
+                        <input type="text" name="q" placeholder="Taomnomadan qidirish" value="{{ query|default:'' }}">
                         <button type="submit" class="search-btn">Qidiruv</button>
                     </form>
                 </div>
@@ -69,11 +68,11 @@
     </header>
 
     <div id="profileSidebar" class="sidebar">
-        <div class="sidebar-header" style="background: var(--primary-yellow); color: #000; border: none;">
-            <div style="display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 18px;">
+        <div class="sidebar-header" style="background: var(--primary-yellow); color: #fff; border: none;">
+            <div style="display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 18px; color: #fff;">
                 <i class="fas fa-user-circle"></i> Profil
             </div>
-            <button class="sidebar-close" onclick="closeProfileSidebar()" style="color: #000;">&times;</button>
+            <button class="sidebar-close" onclick="closeProfileSidebar()" style="color: #fff;">&times;</button>
         </div>
         <div class="sidebar-content">
             <!-- User Info Section -->
@@ -85,7 +84,7 @@
                         <i class="fas fa-edit"></i> Tahrirlash
                     </button>
                     <button id="save-profile-btn" onclick="saveProfileChanges()"
-                        style="display: none; background: var(--primary-yellow); border: none; color: #000; padding: 4px 12px; border-radius: 6px; font-size: 11px; font-weight: 800; cursor: pointer;">
+                        style="display: none; background: var(--primary-yellow); border: none; color: #fff; padding: 4px 12px; border-radius: 6px; font-size: 11px; font-weight: 800; cursor: pointer;">
                         <i class="fas fa-save"></i> Saqlash
                     </button>
                 </div>
@@ -121,7 +120,7 @@
         </div>
         <div class="sidebar-footer" style="padding: 15px 20px; border-top: 1px solid var(--border-color);">
             <a href="{% url 'account_logout' %}"
-                style="display: flex; align-items: center; justify-content: center; gap: 10px; background: var(--primary-yellow); color: #000; text-decoration: none; padding: 14px; border-radius: 12px; font-weight: 700; width: 100%; transition: 0.3s; box-shadow: 0 4px 15px rgba(255, 190, 31, 0.2);">
+                style="display: flex; align-items: center; justify-content: center; gap: 10px; background: var(--primary-yellow); color: #fff; text-decoration: none; padding: 14px; border-radius: 12px; font-weight: 700; width: 100%; transition: 0.3s; box-shadow: 0 4px 15px rgba(230, 48, 48, 0.25);">
                 <i class="fas fa-sign-out-alt"></i> Chiqish
             </a>
         </div>
@@ -172,9 +171,9 @@
 
     <!-- Favorites Sidebar -->
     <div id="favoritesSidebar" class="sidebar">
-        <div class="sidebar-header" style="background: var(--primary-yellow); color: #000; border: none;">
-            <h3 class="sidebar-title" style="color: #000;">Saralanganlar</h3>
-            <button class="sidebar-close" onclick="closeFavoritesSidebar()" style="color: #000;">×</button>
+        <div class="sidebar-header" style="background: var(--primary-yellow); color: #fff; border: none;">
+            <h3 class="sidebar-title" style="color: #fff;">Saralanganlar</h3>
+            <button class="sidebar-close" onclick="closeFavoritesSidebar()" style="color: #fff;">×</button>
         </div>
         <div class="sidebar-content">
             <div class="empty-state">
@@ -190,9 +189,9 @@
 
     <!-- Cart Sidebar -->
     <div id="cartSidebar" class="sidebar">
-        <div class="sidebar-header" style="background: var(--primary-yellow); color: #000; border: none;">
-            <h3 class="sidebar-title" style="color: #000;">Savat</h3>
-            <button class="sidebar-close" onclick="closeCartSidebar()" style="color: #000;">×</button>
+        <div class="sidebar-header" style="background: var(--primary-yellow); color: #fff; border: none;">
+            <h3 class="sidebar-title" style="color: #fff;">Savat</h3>
+            <button class="sidebar-close" onclick="closeCartSidebar()" style="color: #fff;">×</button>
         </div>
         <div class="sidebar-content">
             <div class="empty-state">
@@ -654,27 +653,31 @@
                     tayyor.</p>
             </div>
 
-            <div style="background: #f8fafc; padding: 25px; border-radius: 20px; margin-bottom: 20px; border: 1px solid #e2e8f0; transition: 0.3s; cursor: pointer;"
+            <div style="background: #f8fafc; padding: 20px 25px; border-radius: 20px; margin-bottom: 15px; border: 1px solid #e2e8f0; transition: 0.3s; cursor: pointer;"
                 onmouseover="this.style.borderColor='var(--primary-yellow)'"
                 onmouseout="this.style.borderColor='#e2e8f0'">
-                <p style="color: #64748b; font-size: 13px; margin-bottom: 8px; font-weight: 500;">Qo'ng'iroq qiling:</p>
-                <a href="tel:+998880374444"
-                    style="font-size: 24px; font-weight: 900; color: #1e293b; text-decoration: none; letter-spacing: -0.5px;">+998
-                    88 037 4444</a>
+                <p style="color: #64748b; font-size: 13px; margin-bottom: 10px; font-weight: 500;">Qo'ng'iroq qiling:
+                </p>
+                <a href="tel:+998907321040"
+                    style="display: block; font-size: 22px; font-weight: 900; color: #1e293b; text-decoration: none; letter-spacing: -0.5px; margin-bottom: 8px;">+998
+                    90 732 10 40</a>
+                <a href="tel:+998792201040"
+                    style="display: block; font-size: 22px; font-weight: 900; color: #1e293b; text-decoration: none; letter-spacing: -0.5px;">+998
+                    79 220 10 40</a>
             </div>
 
-            <div style="background: #f8fafc; padding: 25px; border-radius: 20px; border: 1px solid #e2e8f0; transition: 0.3s; cursor: pointer;"
+            <div style="background: #f8fafc; padding: 20px 25px; border-radius: 20px; border: 1px solid #e2e8f0; transition: 0.3s; cursor: pointer;"
                 onmouseover="this.style.borderColor='#E1306C'" onmouseout="this.style.borderColor='#e2e8f0'">
                 <p style="color: #64748b; font-size: 13px; margin-bottom: 8px; font-weight: 500;">Instagram orqali
                     murojaat:</p>
-                <a href="https://instagram.com/nextmarket.uz" target="_blank"
+                <a href="https://instagram.com/bonum.uz" target="_blank"
                     style="font-size: 20px; font-weight: 800; color: #E1306C; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                    <i class="fab fa-instagram" style="font-size: 24px;"></i> @nextmarket.uz
+                    <i class="fab fa-instagram" style="font-size: 24px;"></i> @bonum.uz
                 </a>
             </div>
 
             <button onclick="closeSupportModal()"
-                style="margin-top: 35px; background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 14px; font-weight: 600; text-decoration: underline;">Yopish</button>
+                style="margin-top: 30px; background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 14px; font-weight: 600; text-decoration: underline;">Yopish</button>
         </div>
     </div>
 

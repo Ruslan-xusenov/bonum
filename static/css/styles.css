@@ -1,7 +1,7 @@
-/* Main App Styles - Fixed and Restored */
+/* Main App Styles - Bonum Fast Food */
 :root {
-    --primary-yellow: #ffbe1f;
-    --hover-yellow: #e6a819;
+    --primary-yellow: #e63030;
+    --hover-yellow: #c42020;
     --bg-main: #ffffff;
     --bg-secondary: #f7f7f7;
     --bg-card: #ffffff;
@@ -9,10 +9,10 @@
     --text-muted: #8b8e99;
     --text-gray: #4d4f59;
     --border-color: #e2eaf1;
-    --accent-color: #7000ff;
+    --accent-color: #e63030;
     color-scheme: light;
-    --uzum-purple: #7000ff;
-    --uzum-yellow: #ffbe1f;
+    --uzum-purple: #e63030;
+    --uzum-yellow: #e63030;
     --uzum-gray: #8b8e99;
     --uzum-border: #e2eaf1;
     --uzum-dark: #1f2026;
@@ -102,7 +102,7 @@ header {
 .search-btn {
     padding: 0 25px;
     background: var(--primary-yellow);
-    color: #000;
+    color: #fff;
     border: none;
     border-radius: 0 12px 12px 0;
     font-weight: 700;
@@ -150,7 +150,7 @@ header {
     top: -5px;
     right: -5px;
     background: var(--primary-yellow);
-    color: black;
+    color: #fff;
     font-size: 10px;
     font-weight: 800;
     min-width: 18px;
@@ -387,7 +387,7 @@ header {
 
 .badge-new {
     background: var(--primary-yellow);
-    color: #000;
+    color: #fff;
 }
 
 .wishlist-btn {
@@ -480,7 +480,7 @@ header {
 
 .add-to-cart-btn:hover {
     background: var(--primary-yellow);
-    color: black;
+    color: #fff;
     transform: scale(1.1);
 }
 
@@ -634,7 +634,7 @@ header {
 
 .btn-ok {
     background: var(--primary-yellow);
-    color: #000;
+    color: #fff;
     border: none;
     border-radius: 10px;
     padding: 0 16px;
@@ -828,7 +828,7 @@ header {
 
 .btn-yellow-main {
     background: var(--primary-yellow);
-    color: #000;
+    color: #fff;
     border: none;
     padding: 12px 25px;
     border-radius: 12px;

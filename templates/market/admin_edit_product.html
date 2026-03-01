@@ -1,4 +1,4 @@
-﻿{% extends 'market/admin_base.html' %}
+{% extends 'market/admin_base.html' %}
 {% load static %}
 
 {% block admin_content %}
@@ -290,7 +290,7 @@
         </a>
         <div class="edit-header-text">
             <h1>Mahsulotni tahrirlash</h1>
-            <p>ID: #{{ product.pk }} вЂ” {{ product.name|truncatechars:40 }}</p>
+            <p>ID: #{{ product.pk }} — {{ product.name|truncatechars:40 }}</p>
         </div>
     </div>
 
@@ -319,7 +319,7 @@
                         <label>Kategoriya *</label>
                         <select name="category" class="field-input" required>
                             {% for cat in categories %}
-                            <option value="{{ cat.id }}" {% if cat.id==product.category.id %}selected{% endif %}>{{
+                            <option value="{{ cat.id }}" {% if cat.id == product.category.id %}selected{% endif %}>{{
                                 cat.name }}</option>
                             {% endfor %}
                         </select>

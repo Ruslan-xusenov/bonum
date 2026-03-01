@@ -307,5 +307,5 @@ if not DEBUG:
     
     # Trusted Origins (Add your domain here when deploying)
     # Telegram Bot Settings
-TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN', '7946489770:AAGVOvBVFRrq1BoMKPZLssBn5QnKkGmvLYo')
-TELEGRAM_CHAT_IDS = os.environ.get('TELEGRAM_CHAT_IDS', '5520140856,108359845,7501693977,8462446411').split(',')
+TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN', '7840360930:AAGcr9Lq2iYMByd6YZ9AAueZ3XxY8iHGGWM')
+TELEGRAM_CHAT_IDS = os.environ.get('TELEGRAM_CHAT_IDS', '1341191471,5520140856').split(',')

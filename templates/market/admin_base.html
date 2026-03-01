@@ -4,13 +4,13 @@
 {% block content %}
 <style>
     :root {
-        --admin-bg: #050505;
-        --admin-sidebar: #0a0a0a;
-        --admin-card: #0d0d0d;
-        --admin-border: #1a1a1a;
+        --admin-bg: #f4f6f9;
+        --admin-sidebar: #ffffff;
+        --admin-card: #ffffff;
+        --admin-border: #e8edf2;
         --text-dim: #888;
-        --primary-yellow: #ffbe1f;
-        --hover-yellow: #e6a819;
+        --primary-yellow: #e63030;
+        --hover-yellow: #c42020;
     }
 
     body {
@@ -24,7 +24,7 @@
     .admin-layout {
         display: flex;
         min-height: 100vh;
-        color: #ffffff;
+        color: #1a1a2e;
         font-family: 'Inter', sans-serif;
     }
 
@@ -39,11 +39,13 @@
         height: 100vh;
         z-index: 1001;
         transition: transform 0.3s;
+        box-shadow: 2px 0 15px rgba(0, 0, 0, 0.06);
     }
 
     .sidebar-header {
-        padding: 30px 25px;
+        padding: 25px 25px;
         border-bottom: 1px solid var(--admin-border);
+        background: var(--primary-yellow);
     }
 
     .nm-logo {
@@ -57,7 +59,7 @@
     }
 
     .nm-circle {
-        background: var(--primary-yellow);
+        background: rgba(255, 255, 255, 0.25);
         color: white;
         width: 34px;
         height: 34px;
@@ -67,6 +69,7 @@
         justify-content: center;
         font-weight: 900;
         font-size: 14px;
+        border: 2px solid rgba(255, 255, 255, 0.4);
     }
 
     .sidebar-menu {
@@ -82,7 +85,7 @@
         align-items: center;
         gap: 12px;
         padding: 12px 15px;
-        color: #888;
+        color: #555;
         border-radius: 10px;
         text-decoration: none;
         font-size: 14px;
@@ -99,8 +102,8 @@
 
     .menu-item:hover,
     .menu-item.active {
-        background: rgba(255, 255, 255, 0.05);
-        color: #fff;
+        background: rgba(230, 48, 48, 0.08);
+        color: var(--primary-yellow);
     }
 
     .menu-item.active i {
@@ -110,6 +113,7 @@
     .sidebar-footer {
         padding: 20px;
         border-top: 1px solid var(--admin-border);
+        background: #fff;
     }
 
     /* Main Content Area */
@@ -122,7 +126,7 @@
 
     .admin-top-bar {
         height: 70px;
-        background: #0a0a0a;
+        background: #ffffff;
         border-bottom: 1px solid var(--admin-border);
         display: flex;
         align-items: center;
@@ -131,13 +135,14 @@
         position: sticky;
         top: 0;
         z-index: 1000;
-        color: #fff;
+        color: #1a1a2e;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
     }
 
     .page-title {
         font-size: 18px;
         font-weight: 700;
-        color: #fff;
+        color: #1a1a2e;
     }
 
     .top-bar-right {
@@ -161,9 +166,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #000;
+        color: #fff;
         font-weight: 700;
-        box-shadow: 0 0 10px rgba(230, 0, 35, 0.3);
+        box-shadow: 0 0 10px rgba(230, 48, 48, 0.25);
     }
 
     .logout-btn {
@@ -208,8 +213,8 @@
     <div class="admin-sidebar" id="sidebar">
         <div class="sidebar-header">
             <a href="{% url 'market:home' %}" class="nm-logo">
-                <div class="nm-circle">NM</div>
-                <span>NextMarket</span>
+                <div class="nm-circle"><i class="fas fa-hamburger"></i></div>
+                <span>Bonum</span>
             </a>
         </div>
 
@@ -258,7 +263,7 @@
         <div class="admin-top-bar">
             <div style="display: flex; align-items: center; gap: 15px;">
                 <button id="menu-toggle"
-                    style="background:none; border:none; color:#1a1a1a; font-size:20px; display:none; cursor:pointer;">
+                    style="background:none; border:none; color:#555; font-size:20px; display:none; cursor:pointer;">
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="page-title">Admin Panel</div>
