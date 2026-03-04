@@ -9,7 +9,7 @@ from market import views as market_views
 
 urlpatterns = [
     path('django-secret-admin/', admin.site.urls),  # Django built-in admin (yashirin)
-    path('adminnn/', market_views.admin_dashboard, name='admin_dashboard_redirect'),  # Custom admin panel
+    path('adminnn/', market_views.admin_dashboard, name='admin_dashboard_redirect'),
     path('accounts/', include('allauth.urls')),
     path('', include('market.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

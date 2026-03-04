@@ -50,11 +50,11 @@ server {
     }
 
     location /static/ {
-        alias /var/www/bonum/staticfiles/;
+        alias /root/bonum/static/;
     }
 
     location /media/ {
-        alias /var/www/bonum/media/;
+        alias /root/bonum/media/;
     }
 }
 EOF
