@@ -27,7 +27,14 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-fb1f+c9wxq-ldf
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DJANGO_DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', '*').split(',')
+ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', '91.99.1.216,hojiyevschool.uz,127.0.0.1,localhost').split(',')
+
+CSRF_TRUSTED_ORIGINS = [
+    'http://91.99.1.216',
+    'https://91.99.1.216',
+    'http://hojiyevschool.uz',
+    'https://hojiyevschool.uz',
+]
 
 SITE_ID = 1
 
@@ -89,7 +96,7 @@ else:
         "default": {
             "BACKEND": "channels_redis.core.RedisChannelLayer",
             "CONFIG": {
-                "hosts": [(os.environ.get('REDIS_URL', '127.0.0.1:6379'))],
+                "hosts": [os.environ.get('REDIS_URL', 'redis://127.0.0.1:6379/1')],
             },
         },
     }
