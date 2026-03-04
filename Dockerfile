@@ -11,7 +11,6 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y \
     libpq-dev \
     gcc \
-    iconv \
     && rm -rf /var/lib/apt/lists/*
 
 # Install dependencies
