@@ -46,3 +46,6 @@ cloudinary
 gunicorn
 uvicorn
 daphne
+dj-database-url
+psycopg2-binary
+django-redis
